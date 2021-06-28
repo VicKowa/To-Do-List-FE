@@ -10,23 +10,22 @@
  
   .box {
     position: absolute;
-width: 525px;
-height: 766px;
-left: 455px;
-top: 52px;
+    width: 525px;
+    height: 766px;
+    left: 455px;
+    top: 52px;
 
-background: linear-gradient(141.5deg, rgba(2, 0, 116, 0.76) -7.55%, rgba(2, 0, 116, 0.6156) 99.79%);
-border-radius: 10px;
+    background: linear-gradient(141.5deg, rgba(2, 0, 116, 0.76) -7.55%, rgba(2, 0, 116, 0.6156) 99.79%);
+    border-radius: 10px;
     
 
   }
   
   body {
     position: relative;
-width: 1440px;
-height: 1024px;
-
-background: linear-gradient(116.56deg, #00A3FF -2.01%, rgba(0, 163, 255, 0) 104.14%);
+    width: 1440px;
+    height: 1024px;
+    background: linear-gradient(116.56deg, #00A3FF -2.01%, rgba(0, 163, 255, 0) 104.14%);
     
 
   }
@@ -64,11 +63,11 @@ background: linear-gradient(116.56deg, #00A3FF -2.01%, rgba(0, 163, 255, 0) 104.
   
   .todo-input {
     padding: 15px 32px 14px 16px;
-    border-radius: 4px 0 0 4px;
-    border: 2px solid #b1b1b1de;
+    background: rgba(0, 255, 240, 0.26);
+    border: 1px solid #00E0FF;
+    box-sizing: border-box;
     outline: none;
     width: 320px;
-    background: transparent;
     color: #fff;
   }
   
@@ -78,31 +77,36 @@ background: linear-gradient(116.56deg, #00A3FF -2.01%, rgba(0, 163, 255, 0) 104.
   
   .todo-button {
     padding: 16px;
-    border: none;
-    border-radius: 0 4px 4px 0;
+    
     cursor: pointer;
     outline: none;
-    background: linear-gradient(
-      90deg,
-      rgb(218, 218, 218) 0%,
-      rgba(136, 136, 136, 0.678) 100%
-    );
+    background: linear-gradient(180deg, #0085FF 0%, #0011A8 100%);
+    border: 1px solid #0066FF;
+    box-sizing: border-box;
+    ;
     color: #fff;
     text-transform: capitalize;
     
   }
   
   .todo-input.edit {
-    border: 2px solid #149fff;
+    background: rgba(0, 255, 240, 0.26);
+    border: 1px solid #00E0FF;
+    box-sizing: border-box;
+    
+    
   }
   
   .todo-button.edit {
-    background: linear-gradient(
-      90deg,
-      rgba(20, 159, 255, 1) 0%,
-      rgba(17, 122, 255, 1) 100%
-    );
-    padding: 16px 22px;
+    background: linear-gradient(180deg, #0085FF 0%, #0011A8 100%);
+    border: 1px solid #0066FF;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 78px;
+    height: 45px;
+    left: 830px;
+    top: 170px;
+
   }
   
   .todo-container {
@@ -120,40 +124,35 @@ background: linear-gradient(116.56deg, #00A3FF -2.01%, rgba(0, 163, 255, 0) 104.
     margin: 4px auto;
     color: #fff;
     
-    background: linear-gradient(
-      90deg,
-      rgb(187, 255, 0) 0%,
-      rgb(0, 216, 18) 100%
-    );
+    background: linear-gradient(270deg, #D1FFCD 0%, #00FF29 100%);
+    border: 2px solid #00FF29;
+    box-sizing: border-box;
+    border-radius: 10px;
   
     padding: 16px;
-    border-radius: 5px;
     width: 90%;
     
   }
   
   .todo-row:nth-child(4n + 1) {
-    background: linear-gradient(
-      90deg,
-      rgb(255, 136, 0) 0%,
-      rgb(250, 0, 0) 100%
-    );
-  }
+    background: linear-gradient(270deg, #FF5C00 12.98%, #FFCB14 100%);
+    border: 2px solid #FF5C00;
+    box-sizing: border-box;
+    border-radius: 10px;
+  } 
   
   .todo-row:nth-child(4n + 2) {
-    background: linear-gradient(
-      90deg,
-      rgb(183, 0, 255) 0%,
-      rgb(54, 0, 250) 100%
-    );
+    background: linear-gradient(270deg, #EA7B74 0%, #FF0F00 100%);
+    border: 2px solid #FF0F00;
+    box-sizing: border-box;
+    border-radius: 10px;
   }
   
   .todo-row:nth-child(4n + 3) {
-    background: linear-gradient(
-      90deg,
-      rgba(20, 159, 255, 1) 0%,
-      rgba(17, 122, 255, 1) 100%
-    );
+    background: linear-gradient(270deg, #00E0FF 12.98%, #CDF9FF 100%);
+    border: 2px solid #00E0FF;
+    box-sizing: border-box;
+    border-radius: 10px;
   }
   
   .icons {
