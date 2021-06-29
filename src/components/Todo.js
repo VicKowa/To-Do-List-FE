@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+/*import React, { useState } from 'react';
 import TodoForm from './TodoForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
@@ -31,16 +32,18 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       </div>
       <div className='icons'>
         <RiCloseCircleLine
-          onClick={() => removeTodo(todo.id)}
+          onClick={() => removeTodo(e)}
           className='delete-icon'
         />
-        <TiEdit
-          onClick={() => setEdit({ id: todo.id, value: todo.text })}
-          className='edit-icon'
-        />
+       //hier einfügen
+         
       </div>
     </div>
   ));
 };
 
 export default Todo;
+<TiEdit
+          onClick={() => setEdit({ id: todo.id, value: todo.text })}
+          className='edit-icon'
+        />*/

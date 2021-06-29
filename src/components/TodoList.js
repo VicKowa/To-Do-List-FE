@@ -1,11 +1,89 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+
+import APIHelper from '../APIHelper';
+function TodoList() {
+  const [todos, setTodos] = useState([]);
+  const [todo, setTodo] = useState("");
+
+  useEffect(() => {
+    const fetchTodoAndSetTodos = async () => {
+      const todos = await APIHelper.getAllTodos();
+      setTodos(todos);
+    };
+    fetchTodoAndSetTodos();
+  }, []);
+
+  const createTodo = async e => {
+    e.preventDefault();
+    if (!todo) {
+      alert("please enter something");
+      return;
+    }
+    if (todos.some(({ task }) => task === todo)) {
+      alert(`Task: ${todo} already exists`);
+      return;
+    }
+    const newTodo = await APIHelper.createTodo(todo);
+    console.log(newTodo);
+    setTodos([...todos, newTodo]);
+  };
+
+  const deleteTodo = async (e, id) => {
+    try {
+      e.stopPropagation();
+      await APIHelper.deleteTodo(id);
+      setTodos(todos.filter(({ _id: i }) => id !== i));
+    } catch (err) {}
+  };
+
+  const updateTodo = async (e, id) => {
+    e.stopPropagation();
+    const payload = {completed: !todos.find(todo => todo._id === id).completed}
+    const updatedTodo  = await APIHelper.updateTodo(id, payload);
+    setTodos(todos.map((todo)=> todo._id === id ? updatedTodo: todo));
+    
+  };
+
+  return (
+    <div className="App">
+      <div>
+        <input
+          type="text"
+          value={todo}
+          onChange={({ target }) => setTodo(target.value)}
+          placeholder="Enter a todo"
+        />
+        <button type="button" onClick={createTodo}>
+          Add
+        </button>
+      </div>
+
+      <ul>
+        {todos.length ? todos.map(({ _id, task, completed }, i) => (
+          <li
+            key={i}
+            onClick={e => updateTodo(e, _id)}
+            className={completed ? "completed" : ""}
+          >
+            {task} <span onClick={e => deleteTodo(e, _id)}>X</span>
+          </li>
+        )): <p>No Todos Yet :(</p>}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoList;
+
+/*
+import React, { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
-import "./App.css"
-import APIHelper from "./APIHelper.js"
+import APIHelper from '../APIHelper';
 function TodoList() {
   const [todos, setTodos] = useState([])
   const [todo, setTodo] = useState("")
+  
    
   useEffect(() => {
     const fetchTodoAndSetTodos = async () => {
@@ -55,22 +133,46 @@ function TodoList() {
       return todo;
     });
     setTodos(updatedTodos);
-  };*/
+  };
 
 
      
       return (
         <>
           <h1>What's the Plan for Today?</h1>
-          <TodoForm onSubmit={addTodo} />
-          <Todo
-            todos={todos}
-            completeTodo={completeTodo}
-            removeTodo={removeTodo}
-            updateTodo={updateTodo}
-          />
+          <div>
+            <input 
+
+              id="todo-input"
+             type="text"
+             value={todo}
+             onChange={({ target }) => setTodo(target.value)}
+           />
+           <button type="button" onClick={addTodo}>
+              Add todo
+            </button>
+          </div>
+          <ul>
+        {todos.map(({ _id, task, completed }, i) => (
+          <li
+            key={i}
+            onClick={e => updateTodo(e, _id)}
+            className={completed ? "completed" : ""}
+          >
+            {task} <span onClick={e => removeTodo(e, _id)}>X</span>
+          </li>
+        ))}
+      </ul>
+
         </>
       );
     }
 
-export default TodoList
+export default TodoList 
+//<TodoForm Click={addTodo} />
+/*<Todo
+            todos={todos}
+            //completeTodo={completeTodo}
+            removeTodo={removeTodo}
+            updateTodo={updateTodo}
+          />*/
