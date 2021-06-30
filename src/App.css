@@ -10,13 +10,13 @@
  
   .box {
     position: absolute;
-    width: 525px;
-    height: 766px;
-    left: 455px;
-    top: 52px;
+    width: 624px;
+    height: 1612px;
+    left: 408px;
+    top: 179px;
 
-    background: linear-gradient(141.5deg, rgba(2, 0, 116, 0.76) -7.55%, rgba(2, 0, 116, 0.6156) 99.79%);
-    border-radius: 10px;
+    background: rgba(254, 250, 250, 0.58);
+    border-radius: 120px;
     
 
   }
@@ -25,8 +25,7 @@
     position: relative;
     width: 1440px;
     height: 1024px;
-    background: linear-gradient(116.56deg, #00A3FF -2.01%, rgba(0, 163, 255, 0) 104.14%);
-    
+    background: conic-gradient(from -5.45deg at 50% 50%, #3176E0 0deg, #8C5BAA 166.87deg, #E04279 298.12deg, #3176E0 360deg);
 
   }
      
@@ -46,11 +45,7 @@
     
   }
   
-  h1 {
-    margin: 32px 0;
-    color: #fff;
-    font-size: 24px;
-  }
+  
   
   .complete {
     text-decoration: line-through;
@@ -61,33 +56,7 @@
     margin-bottom: 32px;
   }
   
-  .todo-input {
-    padding: 15px 32px 14px 16px;
-    background: rgba(0, 255, 240, 0.26);
-    border: 1px solid #00E0FF;
-    box-sizing: border-box;
-    outline: none;
-    width: 320px;
-    color: #fff;
-  }
   
-  .todo-input::placeholder {
-    color: #e2e2e2;
-  }
-  
-  .todo-button {
-    padding: 16px;
-    
-    cursor: pointer;
-    outline: none;
-    background: linear-gradient(180deg, #0085FF 0%, #0011A8 100%);
-    border: 1px solid #0066FF;
-    box-sizing: border-box;
-    ;
-    color: #fff;
-    text-transform: capitalize;
-    
-  }
   
   .todo-input.edit {
     background: rgba(0, 255, 240, 0.26);
@@ -117,22 +86,7 @@
     
   }
   
-  .todo-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 4px auto;
-    color: #fff;
-    
-    background: linear-gradient(270deg, #D1FFCD 0%, #00FF29 100%);
-    border: 2px solid #00FF29;
-    box-sizing: border-box;
-    border-radius: 10px;
   
-    padding: 16px;
-    width: 90%;
-    
-  }
   
   .todo-row:nth-child(4n + 1) {
     background: linear-gradient(270deg, #FF5C00 12.98%, #FFCB14 100%);
@@ -163,10 +117,139 @@
   }
   
   .delete-icon {
-    margin-right: 5px;
-    color: #fff;
+    margin-right: 2px;
+    color: rgb(0, 0, 0);
+    width: 21.77px;
+height: 22px;
+left: 60px;
   }
   
+
+
+
+  
   .edit-icon {
-    color: #fff;
+    color: rgb(0, 0, 0);
+    padding-right: 50px;
+width: 21.77px;
+height: 22px;
+
   }
+  ul { position: absolute;
+    width: 472px;
+    height: 40px;
+    left: 484px;
+    top: 512px;
+    
+    background: rgba(254, 250, 250, 0.58);
+    border: 1px solid #2B292B;
+    border-radius: 20px;    
+
+  }   
+  ul li {
+    
+  }
+  .headline1{
+    position: absolute;
+width: 575px;
+height: 72px;
+left: 424px;
+top: 79px;
+
+font-family: Palanquin;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 72px;
+text-align: center;
+
+color: #FEFAFA;
+
+  }
+.headline2
+{
+  position: absolute;
+width: 235px;
+height: 72px;
+left: 594px;
+top: 43px;
+
+font-family: Palanquin;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 72px;
+text-align: center;
+
+color: #FEFAFA;
+}
+.todo-row{
+  position: absolute;
+  width: 549px;
+  height: 46px;
+  left: 446px;
+  top: 389px;
+  
+  background: rgba(254, 250, 250, 0.58);
+  border: 1px solid #2B292B;
+  border-radius: 23px;
+}
+
+.todobutton{
+  position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+border: 1px solid #2B292B; 
+
+}
+.todo-input{
+  position: absolute;
+width: 472px;
+height: 40px;
+left: 484px;
+top: 512px;
+
+background: rgba(254, 250, 250, 0.58);
+border: 1px solid #2B292B;
+border-radius: 20px;
+}
+p {
+margin-top: 15px ;
+  color: #000000;
+  font-size: 30px;
+  position: absolute;
+  width: 472px;
+  height: 40px;
+  left: 12%;
+  
+  background: rgba(254, 250, 250, 0.58);
+  border: 1px solid #2B292B;
+  border-radius: 20px;
+}
+h3 {
+  margin-top: 5px ;
+ 
+width: 472px;
+height: 40px;
+margin-left: 70px;
+padding-top: 4px;
+
+
+background: rgba(254, 250, 250, 0.58);
+border: 1px solid #2B292B;
+border-radius: 20px;
+}
+.todoinputzeile{
+  position: absolute;
+width: 548.55px;
+height: 46px;
+left: 446px;
+top: 389px;
+
+background: rgba(254, 250, 250, 0.58);
+border: 1px solid #2B292B;
+border-radius: 23px;
+}
