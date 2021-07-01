@@ -2,8 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
+    font-family: 'Calibri', sans-serif;
       text-align: center;
       
   }
@@ -17,8 +16,6 @@
 
     background: rgba(254, 250, 250, 0.58);
     border-radius: 120px;
-    
-
   }
   
   body {
@@ -88,26 +85,6 @@
   
   
   
-  .todo-row:nth-child(4n + 1) {
-    background: linear-gradient(270deg, #FF5C00 12.98%, #FFCB14 100%);
-    border: 2px solid #FF5C00;
-    box-sizing: border-box;
-    border-radius: 10px;
-  } 
-  
-  .todo-row:nth-child(4n + 2) {
-    background: linear-gradient(270deg, #EA7B74 0%, #FF0F00 100%);
-    border: 2px solid #FF0F00;
-    box-sizing: border-box;
-    border-radius: 10px;
-  }
-  
-  .todo-row:nth-child(4n + 3) {
-    background: linear-gradient(270deg, #00E0FF 12.98%, #CDF9FF 100%);
-    border: 2px solid #00E0FF;
-    box-sizing: border-box;
-    border-radius: 10px;
-  }
   
   .icons {
     display: flex;
@@ -120,8 +97,7 @@
     margin-right: 2px;
     color: rgb(0, 0, 0);
     width: 21.77px;
-height: 22px;
-left: 60px;
+
   }
   
 
@@ -130,25 +106,12 @@ left: 60px;
   
   .edit-icon {
     color: rgb(0, 0, 0);
-    padding-right: 50px;
-width: 21.77px;
-height: 22px;
+    right: 10px;
+  width: 21.77px;
+  height: 22px;
 
   }
-  ul { position: absolute;
-    width: 472px;
-    height: 40px;
-    left: 484px;
-    top: 512px;
-    
-    background: rgba(254, 250, 250, 0.58);
-    border: 1px solid #2B292B;
-    border-radius: 20px;    
-
-  }   
-  ul li {
-    
-  }
+  
   .headline1{
     position: absolute;
 width: 575px;
@@ -219,10 +182,11 @@ border-radius: 20px;
 p {
 margin-top: 15px ;
   color: #000000;
-  font-size: 30px;
+  font-size: 25px;
   position: absolute;
   width: 472px;
   height: 40px;
+  padding-top: 5px;
   left: 12%;
   
   background: rgba(254, 250, 250, 0.58);
@@ -242,8 +206,8 @@ background: rgba(254, 250, 250, 0.58);
 border: 1px solid #2B292B;
 border-radius: 20px;
 }
-.todoinputzeile{
-  position: absolute;
+.todoinputzeile {
+position: absolute;
 width: 548.55px;
 height: 46px;
 left: 446px;

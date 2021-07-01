@@ -38,13 +38,20 @@ function TodoList(props) {
   }
 
   const updateTodo = async (e, id) => {
+    try{
     e.stopPropagation()
     const payload = {
       completed: !todos.find(todo => todo._id === id).completed,
     }
-    const updatedTodo = await APIHelper.updateTodo(id, payload)
-    setTodos(todos.map(todo => (todo._id === id ? updatedTodo : todo)))
+    console.log("id: ", id)
+    console.log("payload: ", payload)
+
+    const update = await APIHelper.updateTodo(id, payload)
+    setTodos(todos.map(todo => (todo._id === id ? update : todo)))
+  } catch (err) {
+    console.log(err)
   }
+}
 
   const removeTodo = async (e, id) => {
     try {
@@ -89,7 +96,7 @@ function TodoList(props) {
         <>
           <div >
             
-            <input  classname='todoiputzeile'
+            <input  
 
              id="todo-input"
              type="text"
@@ -118,7 +125,7 @@ function TodoList(props) {
            
             <div>
             {task} <span onClick={e => removeTodo(e, _id)}><RiCloseCircleLine className='delete-icon'/></span>
-            {edit} <span onClick={e => updateTodo(e, _id), edit = true}><TiEdit className='edit-icon'/></span>
+            {edit} <span onClick={e => updateTodo(e, _id)}><TiEdit className='edit-icon'/></span>
             
            </div>
            
